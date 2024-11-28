@@ -62,7 +62,7 @@ def train_mia_classifier_ffn(X_train, y_train, X_test, y_test, show_progress=Fal
     optimizer = optim.Adam(model.parameters(), lr=0.001)
 
     # Training the model
-    for epoch in tqdm(range(1000), desc="Training FFN", disable=not show_progress):
+    for epoch in tqdm(range(1200), desc="Training FFN", disable=not show_progress):
         for inputs, labels in train_loader:
             optimizer.zero_grad()
             outputs = model(inputs)
